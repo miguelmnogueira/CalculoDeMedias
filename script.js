@@ -3,6 +3,7 @@ const button = document.querySelector("button");
 const averageDisplay = document.querySelector("#media");
 const situationDisplay = document.querySelector("#situation");
 const textDisplay = document.querySelector("textarea");
+let qntNotas = 0;
 
 const handleClick = () => {
     const nameDisplay = document.querySelector("#name");
@@ -13,7 +14,7 @@ const handleClick = () => {
     }
 
     const notasContainer = document.querySelector("#notas");
-    const qntNotas = notasContainer.childElementCount;
+    qntNotas = notasContainer.childElementCount;
 
     let grades = 0;
     for (let i = 0; i < qntNotas; i++) {
@@ -53,3 +54,19 @@ document.addEventListener("keydown", (e) => {
         handleClick();
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const notaInputs = document.querySelectorAll("#notas input");
+
+    notaInputs.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            const value = parseFloat(e.target.value);
+            if (value > 10) {
+                e.target.value = 10;
+            } else if (value < 0) {
+                e.target.value = 0;
+            }
+        });
+    });
+});
+''
