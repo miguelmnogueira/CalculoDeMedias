@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Document</title>
+        <link rel="stylesheet" href="src/input.css" />
+        <link rel="stylesheet" href="src/output.css" />
+    </head>
+    <body class="bg-zinc-900 flex justify-center px-10 w-full mt-20">
+        <main
+            class="bg-zinc-800 text-white w-[45%] py-12 flex flex-col px-12 gap-5 rounded-xl shadow-lg shadow-black/20 border-1 border-zinc-700"
+        >
+            <h1 class="font-poppins text-3xl font-medium text-center">
+                Cálculo de Médias
+            </h1>
+            <div class="flex flex-col gap-4 font-inter">
+                <div class="flex flex-col">
+                    <label for="name">Nome do Aluno:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        class="bg-zinc-700 text-white px-3 py-1 rounded-md w-full outline-0 border-1 border-zinc-500"
+                        placeholder="Digite o nome do aluno"
+                    />
+                </div>
+                <div class="flex flex-col">
+                    <label for="serie">Série do aluno:</label>
+                    <select
+                        name="serie"
+                        id="serie"
+                        class="bg-zinc-700 text-white px-3 py-1 rounded-md w-full outline-0 border-zinc-500 border-1"
+                    >
+                        <option value="1">1° EM</option>
+                        <option value="2">2° EM</option>
+                        <option value="3">3° EM</option>
+                    </select>
+                </div>
+                <div
+                    class="flex justify-between gap-4 mb-4"
+                    id="notas"
+                >
+                    <div class="flex flex-col min-w-0">
+                        <label for="n1">Bimestre 1:</label>
+                        <input
+                            type="number"
+                            max="10"
+                            id="n1"
+                            class="bg-zinc-700 px-3 py-1 rounded-md border-1 border-zinc-500"
+                        />
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <label for="n2">Bimestre 2:</label>
+                        <input
+                            type="number"
+                            max="10"
+                            id="n2"
+                            class="bg-zinc-700 px-3 py-1 rounded-md border-1 border-zinc-500"
+                        />
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <label for="n3">Bimestre 3:</label>
+                        <input
+                            type="number"
+                            max="10"
+                            id="n3"
+                            class="bg-zinc-700 px-3 py-1 rounded-md border-1 border-zinc-500"
+                        />
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <label for="n4">Bimestre 4:</label>
+                        <input
+                            type="number"
+                            max="10"
+                            id="n4"
+                            class="bg-zinc-700 px-3 py-1 rounded-md border-1 border-zinc-500"
+                        />
+                    </div>
+                </div>
+                <button
+                    class="bg-blue-700 py-2 rounded-md cursor-pointer mb-8 border-1 border-white/20 hover:bg-blue-800 transition-colors"
+                >
+                    Calcular Média
+                </button>
+                <div class="border-b-1 border-zinc-600 mb-4"></div>
+                <h3
+                    class="font-poppins text-2xl text-center font-medium"
+                >
+                    Resultados
+                </h3>
+                <div class="flex justify-between gap-4">
+                    <div class="flex-1">
+                        <label for="media">Média:</label>
+                        <input
+                            type="number"
+                            disabled
+                            name="media"
+                            id="media"
+                            class="bg-zinc-700 text-white px-3 py-1 rounded-md w-full outline-0 border-1 border-zinc-500"
+                        />
+                    </div>
+                    <div class="flex-1/3">
+                        <label for="situation">Situação:</label>
+                        <input
+                            type="text"
+                            disabled
+                            name="situation"
+                            id="situation"
+                            class="bg-zinc-700 text-white px-3 py-1 rounded-md w-full outline-0 border-1 border-zinc-500"
+                        />
+                    </div>
+                </div>
+                <textarea
+                    name="info"
+                    id="info"
+                    readonly
+                    class="resize-none px-3 bg-zinc-700 border-1 border-zinc-500 rounded-md outline-0"
+                >
+                </textarea>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
